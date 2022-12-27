@@ -1,0 +1,24 @@
+.success {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.successMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.successSmall {
+    font-size: 0.8rem;
+}
+
+.bold {
+    font-weight: 600;
+    color: #e30b0b;
+}

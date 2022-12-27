@@ -1,0 +1,93 @@
+.backHeader {
+    background-color: #fff;
+    padding: 1.6rem;
+    box-shadow: 4px 4px 13px -2px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 4px 4px 13px -2px rgba(0,0,0,0.47);
+    -moz-box-shadow: 4px 4px 13px -2px rgba(0,0,0,0.47);
+    z-index: 10;
+}
+
+.backHeader .row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.backHeader .row .title {
+    font-weight: bold;
+}
+
+.container {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.itemRow {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.itemRow .left {
+    width: 70%;
+}
+
+.itemRow .left .itemName {
+    font-weight: 500;
+}
+
+.itemRow .right {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.itemRow .right .counter {
+    display: flex;
+    padding: 0.2rem;
+    width: 80%;
+    justify-content: center;
+    background-color: #fcebeb;
+    border: 2px solid #e30b0b;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.itemRow .right .counter .operator {
+    width: 20%;
+    text-align: center;
+    color: #e30b0b;
+}
+
+.itemRow .right .qty {
+    width: 60%;
+    color: #000;
+    text-align: center;
+}
+
+.billingRow {
+    display: flex;
+}
+
+.billingRow .left {
+    width: 70%;
+}
+
+.billingRow .right {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkoutBtn {
+    background-color: #e30b0b;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
