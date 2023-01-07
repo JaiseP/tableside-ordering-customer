@@ -120,7 +120,8 @@ const CheckoutScreen = ({cart, changeQty, tableNo}) => {
                             </div>
                         </div>
                     </div>
-                    <button onClick={confirm} className="checkoutBtn">Confirm Order</button>  
+                    <button onClick={confirm} className="checkoutBtn" disabled={cart.length ? false : true} style={{backgroundColor: cart.length ? '' : '#b5b5b5'}}>Confirm Order</button>
+                    
                 </div>  
             </div>
         </>

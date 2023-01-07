@@ -5,9 +5,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from "axios";
 import './styles.css';
 
-const MainScreen = ({cart, tableNo, setTable, changeQty, addItem}) => {
+const MainScreen = ({cart, tableNo, changeQty, addItem}) => {
     const navigate = useNavigate();
-    const { table } = useParams();
+    
     const [searchString, setSearchString] = useState('');
     const [products, setProducts] = useState([]);
     
@@ -20,7 +20,7 @@ const MainScreen = ({cart, tableNo, setTable, changeQty, addItem}) => {
     }
 
     useEffect(() => {
-        setTable(table);
+        
         fetchData();
     }, []);
 
@@ -43,7 +43,7 @@ const MainScreen = ({cart, tableNo, setTable, changeQty, addItem}) => {
         <>
             <div className="header">
                 <div className="row">
-                    <img className="header_logo" src="/images/kanthari_logo.png" alt="" />
+                    <img className="header_logo" src="/images/kanthari_logo_light.png" alt="" />
                     <p className="tableNo">Table No: {tableNo}</p>
                 </div>
                 <input value={searchString} onChange={(e) => {handleSearchChange(e.target.value)}} type="text" placeholder="Search for Item" />

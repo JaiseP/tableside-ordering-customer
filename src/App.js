@@ -6,6 +6,7 @@ import MainScreen from './pages/main/main';
 import CheckoutScreen from './pages/checkout/checkout';
 import SuccessScreen from './pages/success/success';
 import TestScreen from './pages/test';
+import ErrorScreen from './pages/error/error';
 
 const cartFromLocalStorage = JSON.parse(localStorage.getItem("cartStore") || "[]");
 
@@ -74,19 +75,19 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route element={<TestScreen />} path = "/test" />
+          <Route element={<SplashScreen tableNo={tableNo} setTable={setTable} />} path = "/table/:table" />
         </Routes>
         <Routes>
-          <Route element={<SplashScreen />} path = "/" />
-        </Routes>
-        <Routes>
-          <Route element={<MainScreen cart={cart} tableNo={tableNo} setTable={setTable} setCart={setCart} addItem={addItem} changeQty={changeQty} />} path = "/menu/:table" />
+          <Route element={<MainScreen cart={cart} tableNo={tableNo}  setCart={setCart} addItem={addItem} changeQty={changeQty} />} path = "/menu" />
         </Routes>
         <Routes>
           <Route element={<CheckoutScreen tableNo={tableNo} cart={cart} setCart={setCart} addItem={addItem} changeQty={changeQty} />} path = "/checkout" />
         </Routes>
         <Routes>
           <Route element={<SuccessScreen tableNo={tableNo} />} path = "/success" />
+        </Routes>
+        <Routes>
+          <Route path="*" element={<ErrorScreen to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </div>

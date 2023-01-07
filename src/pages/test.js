@@ -48,17 +48,13 @@ const TestScreen = () => {
         remove(ref(db, `/${todo.uuid}`));
     }
     return (
-        <div>
-            <input type="text" value={todo} onChange={handleToDoChange} />
-            <button onClick={writeToDatabase}>submit</button>
-            {todos.map(todo => (
-                <>
-                    <h1>{todo.todo}</h1>
-                    <button>Update</button>
-                    <button onClick={() => handleDelete(todo)}>Delete</button>
-                </>
-            ))}
-        </div>
+        <>
+            <div>
+                <img src="/images/no-results.png" alt="Error Image" />
+                <h3>Sorry! Page Not Found</h3>
+                <p>The requested URL is not found. Please try again.</p>
+            </div>
+        </>
     )
 }
 
